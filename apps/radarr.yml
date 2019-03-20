@@ -50,7 +50,8 @@
         pg_volumes:
           - '/opt/appdata/{{pgrole}}/mp4_automator:/config_mp4_automator'
           - '/opt/appdata/{{pgrole}}:/config'
-          - '{{path.stdout}}:{{path.stdout}}'
+          - '/mnt/downloads/nzbget/movies:/downloads'
+          - '/mnt/unionfs/movies:/movies
           - '/etc/localtime:/etc/localtime:ro'
           - '/mnt:/mnt'
 
