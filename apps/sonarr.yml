@@ -39,7 +39,7 @@
         pg_volumes:
           - '/opt/appdata/{{pgrole}}:/config'
           - '/mnt/downloads/nzbget/tv:/downloads'
-          - '/mnt/unionfs/tv:/tv
+          - '/mnt/unionfs/tv:/tv'
           - '/mnt:/mnt'
           - '/etc/localtime:/etc/localtime:ro'
 
