@@ -191,7 +191,10 @@
           PLEX_CLAIM: '{{claim.stdout}}'
           ADVERTISE_IP: '{{customConnections}}'
         purge_networks: yes
-        network: host
+        networks:
+          - name: plexguide
+            aliases:
+              - plex
         volumes: '{{default_volumes}}'
         devices: "{{ '/dev/dri:/dev/dri' if dev_dri.stat.exists == True | default(false) else omit }}"
         etc_hosts:
@@ -223,10 +226,7 @@
           PLEX_UID: '1000'
           PLEX_GID: '1000'
           ADVERTISE_IP: '{{customConnections}}'
-        networks:
-          - name: plexguide
-            aliases:
-              - plex
+        network_mode: host
         volumes: '{{default_volumes}}'
         devices: "{{ '/dev/dri:/dev/dri' if dev_dri.stat.exists == True | default(false) else omit }}"
         etc_hosts:
