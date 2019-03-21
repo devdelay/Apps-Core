@@ -52,7 +52,7 @@
         pg_volumes:
           - '/etc/localtime:/etc/localtime:ro'
           - '/opt/appdata/{{pgrole}}:/config'
-          - '{{path.stdout}}:{{path.stdout}}'
+          - '/mnt/downloads/nzbget:/downloads'
           - '/mnt:/mnt'
           - '/tmp:/tmp'
 
